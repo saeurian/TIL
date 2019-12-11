@@ -632,6 +632,8 @@
 
 * Subnet - Subnet 통신은 라우터 장비 필요 (일반적인 Network 의 경우)
 
+* *But* Azure vNet 내의 Subnet - Subnet은 라우터 장비 없이 통신함
+
 * Automatic routing
 
   > Azure 하나의 vNet내의 subnet들은 라우터 없이도 통신 가능
@@ -669,13 +671,34 @@
   > EX) Ping 명령어 (인터넷 접속 테스트)
 
   * Azure portal에서 NSG(Network Service Group) 탭에서 TCP, UDP, ICMP 등 선택했었음
+  * **MS-SQL = TCP 1433 포트 사용**
+  * **RDP (VM 원격접속) =  TCP 3389 포트 사용**
 
 * vNet에 하나의 IP (또는 더 많은 IP) 지정가능
   * vNet에 주로 Private IP tkdyd
+  
   * **Private IP 대역** (시험에 나옴)
+    
     * `10.0.0.0` ~ `10.255.255.255`
+    
     * `172.16.0.0` ~ `172.31.255.255` (pdf에 오타나있음)
+    
     * `192.168.0.0` ~ `192.168.255.255`
+    
+    * Azure Subnetwork에서는 29bit까지만 허용
+    
+      Why? Azure에서는 1~3까지 예약해놓기 때문 (Subnet에서)
+    
+      30bit이상이 되면 IP 부족
+    
+    ![image-20191210153009940](images/image-20191210153009940.png)
+    
+    **Adress Space에 Subnet 대역대가 존재해야 Address ranged에 기입할 수 있음
+    
+    > `10.10.10.0/30` 이면 Host 수는 2^2-2 = 2개
+    
+  * Vnet 내에 Subnet 생성 가능
+  
   * Public IP를 사용하려면 공인 IP 대역을 구매해서 사용해야 함
 
 #### Virtual Network가 반드시 필요한 Service
