@@ -18,7 +18,7 @@
 
 > Azure Portal 에서 사용할 수 있는 Shell
 >
-> Power Shell과 Azure Shell 명령어를 모두 사용할  수 있음
+> Power Shell과 Azure CLI 명령어를 모두 사용할  수 있음
 
 * Cloud shell을 작동하기 위해서는 Shell을 저장하는 Storage 저장소를 만들어야 함
 
