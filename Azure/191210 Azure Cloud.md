@@ -81,7 +81,7 @@ ipconfig /all #명령 프롬프트 명령어 (띄어쓰기 주의)
 
 * 모듈 집합에서 원하는 모듈을 선택하면 해당 프로그램과 관련된 모듈이 나열됨
 
-![image-20191210101454841](images/image-20191210101454841.png)
+![image-20191210101454841](../images/image-20191210101454841.png)
 
 
 
@@ -148,7 +148,7 @@ https://docs.microsoft.com/ko-kr/cli/azure/install-azure-cli-windows?view=azure-
 > az account set --subscription <value of the subscription id property
 ```
 
-![image-20191210134345088](images/image-20191210134345088.png)
+![image-20191210134345088](../images/image-20191210134345088.png)
 
 
 
@@ -218,7 +218,7 @@ Install-WindowsFeature -name Web-Server -IncludeManagementTools # 웹서버 설�
   * VM의 Network IP : `10.0.0.0`
   * VM의 Broadcast IP : `10.0.0.255`
 
-![image-20191210142732429](images/image-20191210142732429.png)
+![image-20191210142732429](../images/image-20191210142732429.png)
 
 * VM연결 후 VM에서 PowerShell 오픈
 
@@ -244,11 +244,11 @@ Install-WindowsFeature -name Web-Server -IncludeManagementTools		# 웹 서버 �
 * 로드밸런서 세팅 시 포트 지정 : 특정 포트로 들어오는 패킷에 한해 부하 분산 처리를 함
 * 사용자가 들어오면 캐치해서 각 VM으로 보내줌
 
-![image-20191210153609929](images/image-20191210153609929.png)
+![image-20191210153609929](../images/image-20191210153609929.png)
 
 ### Load Balancer Setting
 
-![image-20191210154322148](images/image-20191210154322148.png)
+![image-20191210154322148](../images/image-20191210154322148.png)
 
 * Frontend IP configuration
 
@@ -336,7 +336,7 @@ Install-WindowsFeature -name Web-Server -IncludeManagementTools		# 웹 서버 �
 
 > VNet과 VNet을 연결하여 하나의 네트워크 처럼 이용
 
-![image-20191210162049603](images/image-20191210162049603.png)
+![image-20191210162049603](../images/image-20191210162049603.png)
 
 **Azure : 관리창 (54개의 데이터센터에서 146개의 서비스 제공)
 
