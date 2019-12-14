@@ -152,7 +152,7 @@
 
    - Country/Region : 어느 데이터센터에 AAD를 생성할 것인지 설정
 
-   ![image-20191212112228417](../images/image-20191212112228417.png)
+   ![image-20191212112715134](../images/image-20191212112715134.png)
 
 3. Review - Create
 4. 상단 - Directory + subscription 에서 생성 확인 가능
@@ -254,9 +254,23 @@
 
 
 
-## DNS
+## Azure DNS
 
 ##### 참조 20410D_07-DNS pdf
+
+> Microsoft Azure 인프라를 사용하여 이름 확인을 제공하는 DNS 도메인에 대한 호스팅 서비스
+>
+> Azure에 도메인을 호스트하면 다른 Azure 서비스와 동일한 자격 증명, API, 도구 및 대금 청구를 사용하여 DNS 레코드 관리 가능
+
+
+
+### Azure DNS 기능
+
+1. 역할 기반 액세스 제어 : 조직에서 특정 작업에 액세스하는 사람을 제어 할 수 있음
+2. 활동 로그 : 문제를 해결할 때 사용자가 리소스를 수정한 방법, 시간 등을 모니터링하거나 오류를 찾을 수 있음
+3. 리소스 잠금 : 구독, 리소스 그룹 또는 리소스를 잠궈 다른 사용자가 실수로 리소스를 삭제하거나 수정하는 것을 방지
+
+
 
 ### DNS 정의 & 역할
 
@@ -272,20 +286,21 @@
 
 * FQDN (Fully Qualified Domain Name)
 
-  ![image-20191212154452610](../images/image-20191212154452610.png)
-
   * www.naver.com =>  `www `(Host name) + `naver ` (Domain Name) + `com`(Top)
-  * 네트워크 ID = 그 회사 네트워크 자체 = domain name
+* 네트워크 ID = 그 회사 네트워크 자체 = domain name
   * HOST ID = 네트워크에 있는 각각의 컴퓨터 = 컴퓨터 서버 이름
     * 중복되면 안됨
-    * www : www라는 이름을 가진 컴퓨터 이름 (Word Wide web)
+    * www : www라는 이름을 가진 컴퓨터(서버) 이름 (Word Wide web)
     * smtp
     * pop3
     * ftp
-  * 전체 주소 도메인 네임
+  * 전체 주소 도메인 네임 
+  
+  [전세계 도메인 관리 사이트 Internic][https://www.internic.net]
 
-  [전세계 도메인 관리 사이트]: https://www.internic.net
-  [한국 도메인 관리 사이트 도레지]: www.doregi.com
+  [한국 도메인 관리사이트 doregi][www.doregi.com]
+
+  
 
 * www.naver.com의 IP 주소 = 210.89.164.90
 
@@ -319,14 +334,14 @@
 
 #### 이름 풀이 Client Resolution
 
-> Host 이름을 IP Address로 변환하는 과정
+> Host 이름을 IP Address로 변환하는 전체적인 과정
 
 1. DNS Cache (hosts)
 2. Local DNS
 
 ![image-20191212171826006](../images/image-20191212171826006.png)
 
-www.naver.com 입력 > Local Host Name 확인(자기컴퓨터인지 확인) >  Host file에 등록된 값이 Cache로 load가 됨(캐시 정보확인) > TCP/IP에 등록된 DNS 서버에 확인 > LLMNR 작동 > Net BIOS Name 작동 > WINS Server 작동 > Broadcast > LMHosts File (여기까지 못찾으면 오류 메세지 풀력)
+www.naver.com 입력 > Local Host Name 확인(자기컴퓨터인지 확인) >  Host file에 등록된 값이 Cache로 load가 됨(캐시 정보확인) > TCP/IP에 등록된 DNS 서버에 확인 > LLMNR 작동 > Net BIOS Name 작동 > WINS Server 작동 > Broadcast > LMHosts File (여기까지 못찾으면 오류 메세지 출력)
 
 * **ipconfig /displaydns** : dns서버에 Cache(메모리에 있는 내용)를 보는 명령어
 
@@ -360,6 +375,8 @@ www.naver.com 입력 > Local Host Name 확인(자기컴퓨터인지 확인) >  H
 ### DNS Zone 
 
 > DNS Database = Zone
+>
+> DNS 레코드를 호스트하는 데 사용됨
 >
 > Zone 안에 Record가 있음 (Zone은 Record를 담는 폴더 역할)
 >
