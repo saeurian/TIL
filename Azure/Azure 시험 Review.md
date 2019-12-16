@@ -33,7 +33,7 @@
 
 2. Resource(데이터 센터에 있는 실제 일을 하는 부분)를 기반으로 작동해야 함
 
-   = Resource Pull (*Elastic해지는 기본 조건) = **Scsalable**
+   = Resource Pull (*Elastic해지는 기본 조건) = **Scalable**
 
    > **Resource**
    >
@@ -69,22 +69,22 @@
 
 ### Cloud Computing Model
 
-1. IaaS(Infrasturcture as a Service)
+1. **IaaS**(Infrasturcture as a Service)
 
-   Server Storage Network장비(Infra)를 서비스 -> 가상화 모듈부터는 사용자가 관리\
+   Server Storage Network장비(Infra)를 서비스 -> 가상화 모듈부터는 사용자가 관리
 
    ex ) VM으로 제공하는 SQL - 설치, system database와 같은 것을 사용자가 관리해야 함
 
    * 장점 : Custormaizing 가능
    * 단점 : 관리해야 할 것이 많아짐
 
-2. PaaS(Platform as a Service)
+2. **PaaS**(Platform as a Service)
 
    Platform까지 제공 -> 사용자는 개발만 하면 됨
 
    ex ) Azure Web App, SQL DB (Azure DB service - 사용자가 DB만 관리)
 
-3. SaaS(Software as a Sercive)
+3. **SaaS**(Software as a Service)
 
    소프트웨어 자체를 서비스하는 것 / vendor 자체 개발하여 클라우드 환경에서 사용(설치 X 어디서든 이 소프트웨어를 사용할 수 있음)
 
@@ -132,14 +132,14 @@
 
 VM 구성할 때 자동으로 vNet이 생성되기는 함
 
-vNet을 생성할 떄 Address full을 넣어줘야 함
+vNet을 생성할 때 Address full을 넣어줘야 함
 
 Private, Public 모두 사용 가능 => BUT **Private IP를 넣는게 일반적** (Public IP는 구매해서 사용해야 함)
 
 ### 중요 Point!	Private IP address  poace (사설 IP 대역)
 
 1. `10.X.X.X`
-2. `172.16.X.X` ~ `172.31.X.X``
+2. `172.16.X.X` ~ `172.31.X.X`
 3. `192.168.X.X`
 
 이 안에 Subnet 설정 - 반드시 Subnet이 만들어져야 함 - VM에서 서브넷을 선택하여 IP 사용
@@ -196,7 +196,7 @@ Subnet mask는 최대 29bit까지 사용가능 -> 29bit 사용 시 host 3대
    ​			서버에서 세션을 돌려 VPN 연결 커넥션이 끝나더라도 새로 연결을 맺음
 
    			- ID와 PW를 다시 입력하여 재접속하지 않아도 됨
-   			- 무선연결이 경우 유용하게 사용
+   			- 무선연결인 경우 유용하게 사용
 
 ### ping
 
@@ -218,9 +218,9 @@ $ ping 8.8.8.8
 $ wf.msc
 ```
 
-VM 에서 wf.msc 고급설정 들어가서 ICMP 열어주는 작업 가능(ecorequest)
+VM 에서 wf.msc 고급설정 들어가서 ICMP 열어주는 작업 가능(eco request)
 
-### net use
+### net use v:
 
 ​	공유 폴더 접근
 
@@ -238,7 +238,7 @@ VM 에서 wf.msc 고급설정 들어가서 ICMP 열어주는 작업 가능(ecore
 
 ​	TCP 3389 : RDP (원격접속 - GUI 환경)
 
-​	TCP 22 : SSH (암호화하는 원격 관리 - TUI 환경(명령어)) / Telnt (암호화하지 않는 원격관리 - TUI)
+​	TCP 22 : SSH (암호화하는 원격 관리 - TUI 환경(명령어)) / 23 Telnet (암호화하지 않는 원격관리 - TUI)
 
 ​	TCP 445 : SMB 3.0 / 파일 스토리지, 공유폴더 접근 - server 컴퓨터 포트 (Client는 랜덤포트)
 
@@ -258,7 +258,7 @@ VM 에서 wf.msc 고급설정 들어가서 ICMP 열어주는 작업 가능(ecore
 
 ​	DNS 캐시를 보는 것
 
-### ipconfig /flush
+### ipconfig /flushdns
 
 ​	DNS 캐시 삭제
 
@@ -328,17 +328,22 @@ L4에 존재하는 부하를 분산 처리해주는 장치
 
 = identity (ID 고유한 값) + Password(PW) 
 
+
+
 ## Authentication(인증)
 
 Credential을 확인하는 것
 
 서버에 허가된 사용자만 접근할 수 있도록 하는 것
 
-## Authoriztion(허가)
+
+## Authorization(허가)
 
 인증이 완료가 된 후 인증한 사용자에 대해서 권한을 부여하는 것
 
 인증과 허가가 함께 발생
+
+
 
 ## Token
 

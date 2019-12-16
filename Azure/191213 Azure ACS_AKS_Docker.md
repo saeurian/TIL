@@ -21,14 +21,13 @@
 3. membership type 선택 (RBAC 할당했기 때문에 - assigned)
 4. owner 선택 : 계정을 만들거나 추가하거나 할 수 있음
 5. member 선택
+   
 
 ## DNS 추가 정리
 
 ### IAM (Identity and Access Management)
 
 DNS Zone - IAM - add role assignment
-
-
 
 *그룹은 액세스 관리를 효과적으로 할 때 유용 -> 그룹을 선택하여 역할을 추가하면 role이 그룹 전체에 부여됨
 
@@ -81,9 +80,7 @@ DNS Zone - IAM - add role assignment
 
 1. Public Registry : 
 
-   [Docker Hub]: https://hub.docker.com/
-
-   에 만들어 놓은 컨테이너들처럼 누구나 다운 받을 수 있도록 공유되어 있는 레지스트리
+   [Docker hub](https://hub.docker.com/)에 만들어 놓은 컨테이너들처럼 누구나 다운 받을 수 있도록 공유되어 있는 레지스트리
 
 2. Private Registry
 
@@ -115,7 +112,7 @@ DNS Zone - IAM - add role assignment
 
 > 많은 컨테이너를  docker-compose.yml이라는 파일에 스크립트로 묶어 docker-compose up이라는 명령어를 입력하면 위 파일이 작동되어 안에 있는 스크립트가 작동, 한꺼번에 컨테이너가 실행됨
 
-설치 -> docker-compose.yml 파일 생성 - docker-compose up 명령어 입력
+설치 -> docker-compose.yml 파일 생성 -> docker-compose up 명령어 입력
 
 #### 설치
 
@@ -127,13 +124,13 @@ DNS Zone - IAM - add role assignment
 
 * `docker login` : registry에 ID/PW로 인증받기
 
-* `docker pull `: reigstry에 있는 docker image를 내 컴퓨터로 다운
+* `docker pull ` : reigstry에 있는 docker image를 내 컴퓨터로 다운
 
 * `docker tag` : image 버전 정보입력
 
 * `docker push` : 내 컴퓨터의 docker file을 image로 registry에 업로드
 
-* `docker pull or docker run` : run은 다운 받아 바로 실행 (pull 역할이 합쳐져 있음) 바로 컨테이너를 올리게 됨
+* `docker pull` or `docker run` : run은 다운 받아 바로 실행 (pull 역할이 합쳐져 있음) 바로 컨테이너를 올리게 됨
 
 * `docker rmi` / `docker rm`
 
@@ -142,6 +139,8 @@ DNS Zone - IAM - add role assignment
   2) `docker rmi` : docker **image**를 삭제
 
 * `docker ps` : 컨테이너가 작동되고 있는지 확인하는 명령어 (process 확인)
+
+* `docker commit` : 이미지 새로 생성
 
 
 

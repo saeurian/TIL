@@ -10,7 +10,7 @@
 
 ### Active Directory
 
-> **MS Directory Service** (마이크로소프트의 디렉토리 서비스)\
+> **MS Directory Service** (마이크로소프트의 디렉토리 서비스)
 >
 > 각 컴퓨터에 계정을 만들어놓는 것이 아니라 중앙 컴퓨터에 계정이나 그룹 등의 보안에 대한 정보를 한 네트워크 컴퓨터에 저장해놓는 것
 >
@@ -308,7 +308,7 @@
 
 ![image-20191212170612516](../images/image-20191212170612516.png)
 
-* **Recursive Query** : DNS Client가 보내는 도메인 url을 보내고 IP를 요구하는 것
+* **Recursive Query** : DNS Client가 도메인 url을 보내고 IP를 요구하는 것
 
   Complete answer을 요구함
 

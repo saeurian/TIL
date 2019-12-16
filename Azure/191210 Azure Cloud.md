@@ -57,7 +57,7 @@
 ```powershell
 cd \ #C드라이브로
 md PowerShell #PowerSell 폴더 생성
-cd .\PowerShell\ #powersell 폴더 접근
+cd .\PowerShell\ #powershell 폴더 접근
 cd .. #현재 폴더에서 상위폴더로 이동
 dir #현재 폴더안의 폴더 출력
 get-command #powershell의 모든 명령어를 출력
@@ -77,7 +77,7 @@ ipconfig /all #명령 프롬프트 명령어 (띄어쓰기 주의)
 
 > Power Shell 명령어들의 집합
 >
-> Power Shell 명령어를 사용하려면 Module을 등록시켜줘야 함\
+> Power Shell 명령어를 사용하려면 Module을 등록시켜줘야 함
 
 * 모듈 집합에서 원하는 모듈을 선택하면 해당 프로그램과 관련된 모듈이 나열됨
 
@@ -145,7 +145,7 @@ https://docs.microsoft.com/ko-kr/cli/azure/install-azure-cli-windows?view=azure-
 ```bash
 > az login				# SubScription이 뜸 (json형식)
 > az account list		# 이 list에서 필요한 subscription 코드 다음 코드에 입력
-> az account set --subscription <value of the subscription id property
+> az account set --subscription <value of the subscription id property>
 ```
 
 ![image-20191210134345088](../images/image-20191210134345088.png)
@@ -284,7 +284,7 @@ Install-WindowsFeature -name Web-Server -IncludeManagementTools		# 웹 서버 �
 
 *하지만 접속해야 한다면  VPN을 이용 하자*
 
->Virtual Private Network
+>**Virtual Private Network**
 >
 >원격에서 회사 네트워크 접근
 >
