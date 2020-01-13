@@ -1,4 +1,4 @@
-# 파이썬 기초 (환경 세팅, Jupyter notebook)
+# 파이썬 기초 (환경 세팅, Jupyter notebook, Pycharm)
 
 
 
@@ -106,3 +106,39 @@
 # 앞에 샵을 붙이면 주석문, 코드 부연 설명시 주로 사용
 ```
 
+
+
+## Pycharm
+
+### 설치
+
+이전에 아나콘다로 깔았던 python은 가상 환경
+
+pycharm은 가상환경이 아닌, 로컬에 설치하는 것
+
+1. python을 따로 로컬에서 다운로드 받거나
+2. 아나콘다 python을 이용할 수 있음 < 수업에서는 2번 이용
+
+[pycharm 다운로드](https://www.jetbrains.com/pycharm/)에서 다운받아 설치 (community 버전 다운)
+
+시작에서 pycharm 들어가서 테마 등 옵션을 선택하고 next눌러주기
+
+기본으로 아나콘다의 python을 선택함 -> interpretor를 바꿔주면 다운받은 python을 선택할 수 있음
+
+
+
+### jupyter notebook 과 호환
+
+jupyter notebook > save as 메뉴에서 .py 파일로 저장 후 오픈 가능
+
+pycharm > 설정 > Project interpreter에서 아나콘다 환경으로 변경하면 pycharm에서 아나콘다의 패키지를 사용할 수 있음
+
+
+
+### jupyter notebook 과 다른점
+
+debug 모드를 이용해서 어디서 오류가 나는지 check 지점을 설정하고 확인할 수 있음
+
+프로그래밍하기에 편함
+
+결과를 보려면 print를 꼭 입력해줘야 함
